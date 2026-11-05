@@ -54,8 +54,8 @@ while True:
                             now_pos = (x, y - distance)
                         case "WEST":
                             now_pos = (x - distance, y)
-                case False:
-                    print("YOU MUST ENTER A DISTANCE")
+                # case False:
+                #     print("YOU MUST ENTER A DISTANCE")
 
 
         case _:
