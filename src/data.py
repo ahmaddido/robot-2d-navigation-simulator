@@ -14,6 +14,10 @@ def command_check(comand):
     elif len(comand) == 0:
         distance = 0
 
+    elif len(comand) > 2:
+            #comand = comand[0]
+            distance = 0
+            #print("ERROR in command")
     else:
         comand = comand[0]
         distance = 0
