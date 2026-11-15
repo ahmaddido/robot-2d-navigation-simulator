@@ -5,11 +5,10 @@ now_dir = start_dir
 
 while True:
     comand = input("Hi it is me your Robot, what should I do?").split()
+    if len(comand) == 0:
+        print("You must enter a command")
+        continue
     comand, distance = command_check(comand)
-
-
-
-
 
     match comand:
         case "DONE":
