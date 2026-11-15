@@ -1,6 +1,14 @@
 start_pos = (3, 3)
 start_dir = "NORTH"
 
+args = {
+    "DONE": 1,
+    "STATUS": 1,
+    "RIGHT": 1,
+    "LEFT": 1,
+    "FORWARD": 2
+}
+
 
 def command_check(comand):
     if len(comand) == 2:
@@ -23,3 +31,4 @@ def command_check(comand):
         distance = 0
 
     return comand, distance
+
