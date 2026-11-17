@@ -1,4 +1,4 @@
-from data import start_pos, start_dir, command_check
+from data import start_pos, start_dir, command_check, check_bounds
 
 now_pos = start_pos
 now_dir = start_dir
@@ -9,6 +9,7 @@ while True:
     #     print("You must enter a command")
     #     continue
     comand, distance = command_check(comand)
+    
     if comand is None:
         continue
 
@@ -45,18 +46,51 @@ while True:
         case "FORWARD":
             match distance > 0:
                 case True:
-                    x, y = now_pos
+                    
                     match now_dir:
+                        
                         case "NORTH":
-                            now_pos = (x, y + distance)
+                            for step in range(distance):
+                                x, y = now_pos
+                                nxt_pos = (x, y + 1)
+                                if check_bounds(nxt_pos):
+                                    now_pos = nxt_pos
+                                    continue
+                                else:
+                                    print("OUT OF BOUN")
+                            
                         case "EAST":
-                            now_pos = (x + distance, y)
+                            for step in range(distance):
+                                x, y = now_pos
+                                nxt_pos = (x + 1, y)
+                                if check_bounds(nxt_pos):
+                                    now_pos = nxt_pos
+                                    continue
+                                else:
+                                    print("OUT OF BOUN")
+                            #now_pos = (x + distance, y)
+
                         case "SOUTH":
-                            now_pos = (x, y - distance)
+                            for step in range(distance):
+                                x, y = now_pos
+                                nxt_pos = (x, y - 1)
+                                if check_bounds(nxt_pos):
+                                    now_pos = nxt_pos
+                                    continue
+                                else:
+                                    print("OUT OF BOUN")
+                            #now_pos = (x, y - distance)
                         case "WEST":
-                            now_pos = (x - distance, y)
-                # case False:
-                #     print("YOU MUST ENTER A DISTANCE")
+                            for step in range(distance):
+                                x, y = now_pos
+                                nxt_pos = (x - 1, y)
+                                if check_bounds(nxt_pos):
+                                    now_pos = nxt_pos
+                                    continue
+                                else:
+                                    print("OUT OF BOUN")
+                            #now_pos = (x - distance, y)
+                
 
 
         case _:

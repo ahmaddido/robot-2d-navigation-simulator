@@ -58,3 +58,13 @@ def command_check(comand):
 
     return command, distance
 
+def check_bounds(pos):
+    x, y = pos
+    if x in range(0, 7) and y in range(0, 7):
+        return True
+
+
+
+
+
+
