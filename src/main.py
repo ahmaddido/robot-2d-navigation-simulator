@@ -81,6 +81,7 @@ while True:
                                         continue
                                     else:
                                         print("OBSTACLE !!!")
+                                        total_blocked.append(nxt_pos)
                                         break
                                 else:
                                     print("OUT OF BOUN")
@@ -99,6 +100,7 @@ while True:
                                         continue
                                     else:
                                         print("OBSTACLE !!!")
+                                        total_blocked.append(nxt_pos)
                                         break
                                 else:
                                     print("OUT OF BOUN")
@@ -116,13 +118,12 @@ while True:
                                         continue
                                     else:
                                         print("OBSTACLE !!!")
+                                        total_blocked.append(nxt_pos)
                                         break
                                 else:
                                     print("OUT OF BOUN")
                                     break
                             
                 
-
-
         case _:
             print("I don't understand that command")
