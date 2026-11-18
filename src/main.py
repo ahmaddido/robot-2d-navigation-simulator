@@ -67,6 +67,7 @@ while True:
                                         break
                                 else:
                                     print("OUT OF BOUN")
+                                    total_blocked.append(nxt_pos)
                                     break
                             
                         case "EAST":
@@ -85,6 +86,7 @@ while True:
                                         break
                                 else:
                                     print("OUT OF BOUN")
+                                    total_blocked.append(nxt_pos)
                                     break
                             
 
@@ -104,6 +106,7 @@ while True:
                                         break
                                 else:
                                     print("OUT OF BOUN")
+                                    total_blocked.append(nxt_pos)
                                     break
                             
                         case "WEST":
@@ -122,6 +125,7 @@ while True:
                                         break
                                 else:
                                     print("OUT OF BOUN")
+                                    total_blocked.append(nxt_pos)
                                     break
                             
                 
