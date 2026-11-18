@@ -13,14 +13,6 @@ def command_check(comand):
         "FORWARD": 2
         }
 
-    # if len(comand) == 2:
-    #     try:
-    #         comand, distance = comand
-    #         distance = int(distance)
-    #     except ValueError:
-    #         print("You must enter a a valid number for distance")
-    #         distance = 0
-
     if len(comand) == 0:
         print("You must enter a command")
         return None, None
@@ -42,19 +34,11 @@ def command_check(comand):
             print("Distance must be a valid number")
             return None, None
 
-        if distance < 0:
+        if distance < 1:
             print("Distance must be greater than zero")
             return None, None
     else:
         distance = 0
-
-    # elif len(comand) > 2:
-    #         #comand = comand[0]
-    #         distance = 0
-    #         #print("ERROR in command")
-    # else:
-    #     comand = comand[0]
-    #     distance = 0
 
     return command, distance
 
@@ -62,6 +46,15 @@ def check_bounds(pos):
     x, y = pos
     if x in range(0, 7) and y in range(0, 7):
         return True
+    
+        
+
+def check_obst(pos):
+    obstacles = [(3, 5), (5, 3), (1,2)]
+    if pos not in obstacles:
+        return True
+
+
 
 
 
