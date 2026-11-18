@@ -16,6 +16,7 @@ while True:
         case "DONE":
             print(f"Total Movments: {len(total_mov)}")
             print(f"Blocked Movments: {len(total_blocked)}")
+            print(f"Your Currnt position {now_pos} and direction {now_dir}")
             print("Simulation ended")
             
             break
